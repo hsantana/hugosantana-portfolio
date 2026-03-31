@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hugo A. Santana</title>
+  <meta name="description" content="Hugo A. Santana — Product person and Data Scientist based in Spain. Founder of Indexy, Blind Gallery & Academy. Interested in AI, Blockchain and Startups.">
+  <meta name="keywords" content="Hugo Santana, product manager, data scientist, AI, blockchain, startups, Indexy, Celonis, Spain">
+  <meta name="author" content="Hugo A. Santana">
+  <link rel="canonical" href="https://hugosantana.co">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Hugo A. Santana">
+  <meta property="og:description" content="Product person and Data Scientist interested in AI, Blockchain and Startups. Founder of Indexy, Blind Gallery & Academy.">
+  <meta property="og:url" content="https://hugosantana.co">
+  <meta property="og:image" content="https://pbs.twimg.com/profile_images/2025978496145559552/tb8wWibT_400x400.jpg">
+  <meta property="profile:first_name" content="Hugo">
+  <meta property="profile:last_name" content="Santana">
+  <meta property="profile:username" content="hsantana8">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@hsantana8">
+  <meta name="twitter:title" content="Hugo A. Santana">
+  <meta name="twitter:description" content="Product person and Data Scientist interested in AI, Blockchain and Startups. Founder of Indexy, Blind Gallery & Academy.">
+  <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/2025978496145559552/tb8wWibT_400x400.jpg">
+
+  <!-- JSON-LD structured data (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hugo A. Santana",
+    "url": "https://hugosantana.co",
+    "image": "https://pbs.twimg.com/profile_images/2025978496145559552/tb8wWibT_400x400.jpg",
+    "jobTitle": "Product Manager & Data Scientist",
+    "description": "Product person and Data Scientist interested in AI, Blockchain and Startups. Based in Spain.",
+    "sameAs": [
+      "https://x.com/hsantana8",
+      "https://github.com/hsantana",
+      "https://www.linkedin.com/in/hugosantana8/"
+    ],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Eindhoven University of Technology" },
+      { "@type": "CollegeOrUniversity", "name": "Universidad Politécnica de Madrid" },
+      { "@type": "CollegeOrUniversity", "name": "Tecnológico de Monterrey" }
+    ],
+    "knowsAbout": ["Artificial Intelligence", "Blockchain", "Product Management", "Data Science", "Startups", "Crypto"],
+    "worksFor": { "@type": "Organization", "name": "Indexy", "url": "https://indexy.xyz" }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fff;
+      color: #111;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 32px 64px;
+    }
+
+    /* ── Header ───────────────────────────────────────────── */
+    .header { margin-bottom: 40px; }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .avatar {
+      flex-shrink: 0;
+      width: 63px;
+      height: 63px;
+      border-radius: 50%;
+      background: #f0f0f0;
+      border: 1px solid #e5e5e5;
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      margin: 0;
+    }
+
+    .header .links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px 14px;
+      margin-bottom: 14px;
+    }
+
+    .header .links a {
+      color: #666;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .header .links a:hover { color: #111; }
+
+    .header .links a svg {
+      display: block;
+    }
+
+    @keyframes wave {
+      0%   { transform: rotate(0deg); }
+      15%  { transform: rotate(18deg); }
+      30%  { transform: rotate(-10deg); }
+      45%  { transform: rotate(14deg); }
+      60%  { transform: rotate(-6deg); }
+      75%  { transform: rotate(8deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .contact-link {
+      font-size: 13px;
+      color: #333;
+      cursor: pointer;
+      background: none;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-family: inherit;
+      margin-left: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .contact-link:hover { color: #111; border-color: #aaa; }
+
+    .contact-link .wave-hand {
+      display: inline-block;
+      transform-origin: 70% 80%;
+    }
+
+    .contact-link:hover .wave-hand {
+      animation: wave 0.7s ease-in-out;
+    }
+
+    .header .bio {
+      font-size: 15px;
+      color: #222;
+      white-space: nowrap;
+    }
+
+    /* ── Divider ──────────────────────────────────────────── */
+    hr {
+      border: none;
+      border-top: 1px solid #e5e5e5;
+      margin: 32px 0;
+    }
+
+    /* ── Section label ────────────────────────────────────── */
+    .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .label-icon {
+      font-size: 13px;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    /* ── Two-column body ──────────────────────────────────── */
+    .columns {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 0 48px;
+    }
+
+    /* ── Entry row (text + logo) ──────────────────────────── */
+    .entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .entry-body { flex: 1; min-width: 0; }
+
+    .entry-company {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .entry-company a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .entry-company a:hover { color: #888; }
+
+    .entry-company a .ext-icon {
+      display: inline-block;
+      margin-left: 4px;
+      font-size: 10px;
+      color: #bbb;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+      transition: color 0.15s;
+    }
+
+    .entry-company a:hover .ext-icon { color: #888; }
+
+    .entry-role {
+      font-size: 13px;
+      color: #444;
+      margin-top: 1px;
+    }
+
+    .entry-meta {
+      font-size: 12px;
+      color: #999;
+      margin-top: 1px;
+    }
+
+    .entry-desc {
+      font-size: 13px;
+      color: #444;
+      margin-top: 4px;
+    }
+
+    /* ── Logo placeholder ─────────────────────────────────── */
+    .logo {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #f3f3f3;
+      border: 1px solid #e8e8e8;
+      /* swap src when real logo is ready */
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* ── Project row (text + logo) ────────────────────────── */
+    .project {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .project-body { flex: 1; min-width: 0; }
+
+    .project-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .project-name a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .project-name a:hover { color: #888; }
+
+    .project-name a .ext-icon {
+      display: inline-block;
+      margin-left: 4px;
+      font-size: 10px;
+      color: #bbb;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+      transition: color 0.15s;
+    }
+
+    .project-name a:hover .ext-icon { color: #888; }
+
+    .project-date {
+      font-size: 12px;
+      color: #999;
+      margin-top: 1px;
+    }
+
+    .project-desc {
+      font-size: 13px;
+      color: #444;
+      margin-top: 2px;
+    }
+
+    .project-logo {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 7px;
+      background: #f3f3f3;
+      border: 1px solid #e8e8e8;
+    }
+
+    .project-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 7px;
+      display: block;
+    }
+
+    /* ── Stack tags ───────────────────────────────────────── */
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .tag {
+      font-size: 11px;
+      color: #666;
+      background: #f5f5f5;
+      border-radius: 4px;
+      padding: 2px 7px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Studies section ──────────────────────────────────── */
+    .studies {
+      margin-top: 40px;
+    }
+
+    .studies-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0 32px;
+    }
+
+    .study {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .study-body {}
+
+    .study-institution {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .study-degree {
+      font-size: 12px;
+      color: #444;
+      margin-top: 2px;
+    }
+
+    .study-years {
+      font-size: 12px;
+      color: #777;
+      margin-top: 1px;
+    }
+
+    @media (max-width: 600px) {
+      .studies-grid { grid-template-columns: 1fr; gap: 20px 0; }
+    }
+
+    /* ── Mobile ───────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .page { padding: 32px 20px 48px; }
+
+      /* Bio: allow wrapping on small screens */
+      .header .bio { white-space: normal; }
+
+      /* Stack columns vertically */
+      .columns { grid-template-columns: 1fr; gap: 0; }
+      .col-projects { margin-top: 32px; }
+
+      /* Studies: tighten top spacing */
+      .studies { margin-top: 0; }
+      .studies hr { margin: 16px 0; }
+      .studies-grid { grid-template-columns: 1fr; gap: 20px 0; }
+
+      /* Prevent any element from overflowing viewport */
+      .page, .header, .columns, .studies { max-width: 100%; overflow-x: hidden; }
+      body { overflow-x: hidden; }
+    }
+
+    /* ── Modal ────────────────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.18);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      width: 100%;
+      max-width: 400px;
+      margin: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+
+    .modal h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .modal label {
+      display: block;
+      font-size: 12px;
+      color: #888;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .modal input,
+    .modal textarea {
+      width: 100%;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+      padding: 9px 11px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #111;
+      outline: none;
+      margin-bottom: 16px;
+      resize: vertical;
+      background: #fff;
+    }
+
+    .modal input:focus,
+    .modal textarea:focus {
+      border-color: #bbb;
+    }
+
+    .modal textarea { min-height: 96px; }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .btn-cancel {
+      background: none;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+      color: #888;
+    }
+
+    .btn-cancel:hover { border-color: #bbb; color: #111; }
+
+    .btn-send {
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 18px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-send:hover { background: #333; }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ── Header ── -->
+    <header class="header">
+      <div class="header-top">
+        <div class="avatar">
+          <img src="https://pbs.twimg.com/profile_images/2025978496145559552/tb8wWibT_400x400.jpg" alt="Hugo A. Santana">
+        </div>
+        <h1>Hugo A. Santana</h1>
+      </div>
+      <nav class="links">
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/hugosantana8/" target="_blank" title="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452H17.21v-5.569c0-1.328-.024-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.986V9h3.102v1.561h.044c.432-.817 1.487-1.678 3.061-1.678 3.274 0 3.878 2.155 3.878 4.958v6.611zM5.337 7.433a1.8 1.8 0 1 1 0-3.601 1.8 1.8 0 0 1 0 3.601zM6.926 20.452H3.747V9h3.179v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a href="https://x.com/hsantana8" target="_blank" title="X">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+          </svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/hsantana" target="_blank" title="GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+
+        <!-- Contact -->
+        <button class="contact-link" onclick="openModal()"><span class="wave-hand">👋</span> Say Hi</button>
+
+      </nav>
+      <p class="bio">Product person and Data Scientist interested in AI, Blockchain and Startups. Based in Spain.</p>
+    </header>
+
+    <hr />
+
+    <!-- ── Two columns ── -->
+    <div class="columns">
+
+      <!-- Work (60%) -->
+      <div class="col-work">
+        <div class="label"><span class="label-icon">💼</span> Work</div>
+
+        <div class="entry">
+          <div class="logo"><img src="https://media.licdn.com/dms/image/v2/D4E0BAQHyuXgu8AMHig/company-logo_100_100/B4EZsr9Vr0KgAQ-/0/1765969059012/indexy_crypto_logo?e=1776297600&v=beta&t=yio-Ee78WBrBzPuxtuIDFQWa5dvqljNZHa957rbrNac" alt="Indexy"></div>
+          <div class="entry-body">
+            <div class="entry-company"><a href="https://indexy.xyz" target="_blank" rel="noopener">Indexy <span class="ext-icon">↗</span></a></div>
+            <div class="entry-role">Founder</div>
+            <div class="entry-meta">Feb 2025 – Present · Remote</div>
+            <div class="entry-desc">Founded an analytics and financial platform for AI-powered crypto indexes with 10k users, 1.6k indexes and 5k tracked assets.</div>
+            <div class="stack">
+              <span class="tag">Ethereum/Base</span>
+              <span class="tag">Privy</span>
+              <span class="tag">Coingecko</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Render</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="logo"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQHtVCitFodDxQ/company-logo_100_100/company-logo_100_100/0/1672920400200?e=1776297600&v=beta&t=jh2GDs3Ftm-T923kiOF6C3A2PytBez3LosYk3-GILs8" alt="Blind Gallery"></div>
+          <div class="entry-body">
+            <div class="entry-company"><a href="https://blindgallery.xyz" target="_blank" rel="noopener">Blind Gallery & Academy <span class="ext-icon">↗</span></a></div>
+            <div class="entry-role">Founder</div>
+            <div class="entry-meta">Jun 2022 – Mar 2025 · Remote</div>
+            <div class="entry-desc">Founded a digital gallery and academy on the blockchain. Worked with ±80 contemporary generative artists and reached 1k+ collectors &amp; students.</div>
+            <div class="stack">
+              <span class="tag">Tezos</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">NFTs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="logo"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQFuQ2SR1hYEVw/company-logo_100_100/company-logo_100_100/0/1673013035844?e=1776297600&v=beta&t=Bj2ud1mzFjntrrovW5a9B7rxfiSq2BdBQ89X-BlrOrQ" alt="Kaloh's Newsletter"></div>
+          <div class="entry-body">
+            <div class="entry-company"><a href="https://kaloh.xyz" target="_blank" rel="noopener">Kaloh's Newsletter <span class="ext-icon">↗</span></a></div>
+            <div class="entry-role">Author</div>
+            <div class="entry-meta">May 2021 – Present · Remote</div>
+            <div class="entry-desc">Bestselling Substack covering blockchain, digital assets and markets.</div>
+            <div class="stack">
+              <span class="tag">Email Marketing</span>
+              <span class="tag">Dune</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="logo"><img src="https://media.licdn.com/dms/image/v2/C560BAQHasx3QulwNAg/company-logo_100_100/company-logo_100_100/0/1630664634137/rankup_ai_logo?e=1776297600&v=beta&t=oixHyS-UHfzYFicmxOMs5K5NZ4mLHfKlF3k3RYpVEtg" alt="RankUp.ai"></div>
+          <div class="entry-body">
+            <div class="entry-company">RankUp.ai</div>
+            <div class="entry-role">Co-Founder</div>
+            <div class="entry-meta">Sep 2020 – Sep 2021 · Remote</div>
+            <div class="entry-desc">Founded an HR platform applying machine learning to match professionals with career opportunities.</div>
+            <div class="stack">
+              <span class="tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="logo"><img src="https://media.licdn.com/dms/image/v2/D4E0BAQE0L5GhxS7LqQ/company-logo_100_100/B4EZgOn4TlHoAU-/0/1752591992540/celonis_logo?e=1776297600&v=beta&t=E7RGNOG6j2mo6Zh92PuevqTvoX6pF2ICkjtqdaldQ0M" alt="Celonis"></div>
+          <div class="entry-body">
+            <div class="entry-company">Celonis</div>
+            <div class="entry-role">Senior Product Manager</div>
+            <div class="entry-meta">Feb 2017 – Sep 2020 · Munich, Germany</div>
+            <div class="entry-desc">Joined as employee ~100 and supported hypergrowth across business analysis, data science, and product roles within a global B2B SaaS process intelligence platform.</div>
+            <div class="stack">
+              <span class="tag">Process Mining</span>
+              <span class="tag">Jira</span>
+              <span class="tag">SQL</span>
+              <span class="tag">PQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="logo"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQFrkoIkx3e0hg/company-logo_100_100/company-logo_100_100/0/1630581691764/plc_international_inc_logo?e=1776297600&v=beta&t=CCfBk5E5lPYYRrgaz8Aph7iMctZJiZCxsCa5ZyEPMf8" alt="PLC International"></div>
+          <div class="entry-body">
+            <div class="entry-company">PLC International</div>
+            <div class="entry-role">Software Engineer</div>
+            <div class="entry-meta">Jan 2012 – May 2015 · Miami, USA</div>
+            <div class="entry-desc">Developed embedded software supporting secure telecommunications infrastructure used in power grid communication networks.</div>
+            <div class="stack">
+              <span class="tag">Python</span>
+              <span class="tag">Embedded C</span>
+              <span class="tag">PHP</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Building (40%) -->
+      <div class="col-projects">
+        <div class="label"><span class="label-icon">🧪</span> Building</div>
+
+        <div class="project">
+          <div class="project-logo"><img src="applied-icon.ico" alt="Applied"></div>
+          <div class="project-body">
+            <div class="project-name">
+              <a href="https://theapplied.co" target="_blank" rel="noopener">
+                Applied <span class="ext-icon">↗</span>
+              </a>
+            </div>
+            <div class="project-date">March 2026</div>
+            <div class="project-desc">Agentic deep research on how companies are applying AI.</div>
+            <div class="stack">
+              <span class="tag">Supabase</span>
+              <span class="tag">Claude Code</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Cloudflare</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-logo"><img src="maplo-icon.png" alt="Maplo"></div>
+          <div class="project-body">
+            <div class="project-name"><a href="https://maplo.ai" target="_blank" rel="noopener">Maplo.ai <span class="ext-icon">↗</span></a></div>
+            <div class="project-date">February 2026</div>
+            <div class="project-desc">Discover and map companies' processes from audio interviews.</div>
+            <div class="stack">
+              <span class="tag">ElevenLabs</span>
+              <span class="tag">Cloudflare</span>
+              <span class="tag">Claude Code</span>
+              <span class="tag">Stripe</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-logo"><img src="writeback-icon.svg" alt="WriteBack"></div>
+          <div class="project-body">
+            <div class="project-name"><a href="https://writeback.dev" target="_blank" rel="noopener">WriteBack.dev <span class="ext-icon">↗</span></a></div>
+            <div class="project-date">January 2026</div>
+            <div class="project-desc">Get feedback on your skills and MCPs from AI agents.</div>
+            <div class="stack">
+              <span class="tag">Fastify</span>
+              <span class="tag">Neon DB</span>
+              <span class="tag">MCP SDK</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ── Studies ── -->
+    <div class="studies">
+      <hr style="margin-bottom: 32px;" />
+      <div class="label"><span class="label-icon">🎓</span> Studies</div>
+      <div class="studies-grid">
+
+        <div class="study">
+          <div class="logo"><img src="https://media.licdn.com/dms/image/v2/D4E0BAQHMbGGFMxd-RQ/company-logo_100_100/B4EZncpxfyHgAQ-/0/1760343562663/eindhoven_university_of_technology_logo?e=1776297600&v=beta&t=S_OiuYFqQPWXe2OGXTt21FHD8R3UL1cPYkpE1Ku2rV4" alt="TU Eindhoven"></div>
+          <div class="study-body">
+            <div class="study-institution">TU Eindhoven</div>
+            <div class="study-degree">MSc Data Science</div>
+            <div class="study-years">2015 – 2017</div>
+          </div>
+        </div>
+
+        <div class="study">
+          <div class="logo"><img src="https://media.licdn.com/dms/image/v2/D4D0BAQG6juWKWeGadw/company-logo_100_100/B4DZg1z4D9G8AQ-/0/1753249448560/universidad_politecnica_de_madrid_logo?e=1776297600&v=beta&t=Oh7OSEh4qk-eh3fLukzGZf0q2HVswl5jNvubBR8PG_g" alt="TU Madrid"></div>
+          <div class="study-body">
+            <div class="study-institution">TU Madrid</div>
+            <div class="study-degree">MSc Data Science</div>
+            <div class="study-years">2015 – 2017</div>
+          </div>
+        </div>
+
+        <div class="study">
+          <div class="logo"><img src="https://media.licdn.com/dms/image/v2/D560BAQHi6SwuUUoiOA/company-logo_100_100/B56Zyu5hdvG4AU-/0/1772460841223/tecdemonterrey_logo?e=1776297600&v=beta&t=-DF3qWMg4OkOLhaogVMPuvlK1ECnzU9q5hwN7uFhUWI" alt="Tecnológico de Monterrey"></div>
+          <div class="study-body">
+            <div class="study-institution">Tecnológico de Monterrey</div>
+            <div class="study-degree">BSc Computer Science</div>
+            <div class="study-years">2007 – 2011</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Contact modal ── -->
+  <div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
+    <div class="modal">
+      <h2>Get in touch</h2>
+      <form onsubmit="handleSubmit(event)">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="you@example.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="What's on your mind?" required></textarea>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" onclick="closeModal()">Cancel</button>
+          <button type="submit" class="btn-send">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('modal').classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('open');
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target === document.getElementById('modal')) closeModal();
+    }
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-send');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      const payload = {
+        name:    document.getElementById('name').value.trim(),
+        email:   document.getElementById('email').value.trim(),
+        message: document.getElementById('message').value.trim(),
+      };
+
+      try {
+        const res = await fetch('/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (res.ok) {
+          btn.textContent = 'Sent ✓';
+          setTimeout(() => { closeModal(); e.target.reset(); btn.textContent = 'Send'; btn.disabled = false; }, 1200);
+        } else {
+          btn.textContent = 'Error — try again';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
